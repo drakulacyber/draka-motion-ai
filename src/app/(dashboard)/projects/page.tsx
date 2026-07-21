@@ -79,7 +79,7 @@ export default function ProjectsPage() {
   const totalItems = projects.reduce((sum, p) => sum + p.itemCount, 0);
 
   const filteredProjects = useMemo(() => {
-    let result = projects.filter(
+    const result = projects.filter(
       (p) =>
         p.name.toLowerCase().includes(search.toLowerCase()) ||
         p.description?.toLowerCase().includes(search.toLowerCase()) ||

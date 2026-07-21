@@ -56,7 +56,7 @@ export default function VoiceAIPage() {
     }, 2000);
   };
 
-  const waveformBars = Array.from({ length: 60 }, () => Math.random() * 100);
+  const waveformBars = React.useMemo(() => Array.from({ length: 60 }, (_, i) => ((i * 17) % 100)), []);
 
   return (
     <div className="p-6 lg:p-8 space-y-8 min-h-screen">
